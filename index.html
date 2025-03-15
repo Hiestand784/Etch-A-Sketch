@@ -5,10 +5,29 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet" href="main.css">
-    <script src="scripts.js"></script>
+    <script src="scripts.js" defer></script>
 </head>
 <body>
-    <div id ="container"></div>
-    
+    <h2 id = "head">Etch-A-Sketch</h2>
+    <div class="content">
+        <div class="menu">
+            <div class = "submenu" class="sizeSelect">
+                <h4>"The grid is size NxN"</h4>
+                <input id="sizeSlider" type="range" value="16" min="4" max="100"/>
+            </div>
+            <div id = "submenu" class="colorSelect">
+                <button name="colorButton" type="button">Choose Color Here</button>
+            </div>
+            <div id = "submenu" class = "buttons">
+                <button name="button1" type="button">Draw</button>
+                <button name="button2" type="button">Erase</button>
+                <button name="button2" type="button">Clear</button>
+            </div>
+        </div>
+        <div id="container"></div>
+    </div>    
+    <div id = "foot">
+        <p>"Footer text goes here"</p>
+    </div>
 </body>
 </html>

@@ -1,6 +1,14 @@
-for(x=0; x<16; x++){
-    var grid = document.createElement('div')
-    grid.className = "square";
+const body = document.body;
 
-    document.getElementById('grid').appendChild(container);
+let i = 64;
+for(x=0; x<i; x++) {
+    var row = document.createElement("div");
+    row.className = "row";
+    for(y=0; y<i; y++){
+        var column = document.createElement("div");
+        column.className = "column";
+        row.append(column);
+    }
+    container.append(row);
 }
+
