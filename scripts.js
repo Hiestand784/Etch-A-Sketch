@@ -1,6 +1,6 @@
 const body = document.body;
 
-let i = 64;
+let i = 20;
 for(x=0; x<i; x++) {
     var row = document.createElement("div");
     row.className = "row";
