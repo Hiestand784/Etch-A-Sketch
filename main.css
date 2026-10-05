@@ -2,21 +2,35 @@ body {
 display: flex;
 flex-direction: column;
 font-family: Arial, Helvetica, sans-serif;
+margin: 0;
+background-color: rgb(183, 183, 183);
 }
 
 h1{
-font-size: 64px;
+font-size: xx-large;
+color:white
+}
+
+h2{
+    font-size: x-large;
+    text-align: center;
+}
+
+h3{
+    font-size: large;
 }
 
 p{
-font-size: x-large;
+font-size: large;
 }
 
-#head{
-background-color: rgba(145, 145, 145, 0.384);
+#title{
+background-color: rgb(0, 0, 0);
 padding: 40px;
 display: flex;
 justify-content: center;
+margin-top: 0px;
+margin-bottom: 32px;
 }
 
 .content{
@@ -32,17 +46,18 @@ font-size: large;
 border-radius: 6px;
 }
 
-#container {
+#grid-container {
 display: flex;
 flex-direction: column;
-width: 500px;
-height: 500px;
+width: 600px;
+height: 600px;
 flex-shrink: 0;
 flex-grow: 0;
-border: solid 1px;
+border: solid 1px black;
+box-sizing: border-box;
 }
 
-#container > div{
+#grid-container > div{
 min-height: 5px;
 min-width: 5px;
 height: 100%;
@@ -50,62 +65,59 @@ width: 100%;
 }
 
 .row{
-    display: flex;
-    border: none;
-    flex-direction: column;
-    flex-wrap: wrap;
-    }
-    
-    .column{
-    background-color: aqua;
-    flex-basis: 100%;
-    border: 1px dashed;
-    }
-    
-@media screen and (min-width: 1000px){
-    .row {
-        flex: 1;
-    }
-}
-
-#menu{
 display: flex;
-flex-direction: column;
-min-width: 300px;
-margin-top: 40%;
+flex-direction: row;
+flex: 1;
+width: 100%;
+}
+    
+.column{
+background-color: rgb(255, 255, 255);
+flex: 1;
+height: 100%;
+border: 1px dashed rgb(170, 170, 170, 0.2);
+box-sizing: border-box;
 }
 
-#submenu{
+.submenu{
+background-color: white;
 display: flex;
 flex-direction: column;
 min-width: 300px;
 border: solid 1px;
-padding: 4%;
+padding: 8px;
 }
 
-#submenu button{
-margin: 2%;
+.submenu button{
+margin: 8px;
 }
 
-#sizeSelect{
+#colorPicker{
 display: flex;
-flex-direction: column;
-border: dashed 2px;
-}
-
-#colorSelector{
-display: flex;
-flex-direction: column;
+flex-direction: row;
+align-items: center;
+justify-content:space-evenly;
+width: 200px;
+padding-left: 24px;
 }
 
 #footer{
+background-color: black;
+color: white;
 position: absolute;
 bottom: 0;
 display: flex;
 align-self: center;
 margin-top: auto;
+width: 100%;
+justify-content: center;
 }
 
 #footer, p{
 font-size: x-large;
+}
+
+a{
+color: rgb(255, 255, 255);
+text-decoration: none;
 }
